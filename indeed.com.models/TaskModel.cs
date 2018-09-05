@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace indeed.com.models
 {
@@ -16,7 +12,7 @@ namespace indeed.com.models
             Cancelled
         }
 
-        private Task<IEnumerable<JobInfo>> jobTasks;
+        private CancellableTask<ICollection<JobInfo>, JobInfo> jobTasks;
 
         public string Name { get; set; }
         public string Description { get; set; }
@@ -28,10 +24,21 @@ namespace indeed.com.models
         {
             if(State == TaskState.Ready || State == TaskState.Paused)
             {
+
                 State = TaskState.Runned;
                 return true;
             }
             return false;
+        }
+
+        public bool Cancell()
+        {
+            if (State != TaskState.Cancelled)
+            {
+                State = TaskState.Cancelled;
+                return true;
+            }
+            return false; ;
         }
     }
 }

@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CancellableTask.cs" />
     <Compile Include="JobInfo.cs" />
     <Compile Include="JobProperty.cs" />
     <Compile Include="ParserRequest.cs" />

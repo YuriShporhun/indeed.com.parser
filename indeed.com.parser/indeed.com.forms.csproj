@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CreateTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateTask.Designer.cs">
+      <DependentUpon>CreateTask.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +69,9 @@
     <Compile Include="TaskPanel.Designer.cs">
       <DependentUpon>TaskPanel.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CreateTask.resx">
+      <DependentUpon>CreateTask.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -96,6 +105,10 @@
     <ProjectReference Include="..\indeed.com.classes\indeed.com.classes.csproj">
       <Project>{7DB59A88-84A1-405F-B2D8-3C5F1D0EDD27}</Project>
       <Name>indeed.com.classes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\indeed.com.presenters\indeed.com.presenters.csproj">
+      <Project>{C5924723-C1E9-46E3-87E8-8AB1A0A69B61}</Project>
+      <Name>indeed.com.presenters</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
