@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
+﻿using indeed.com.models;
 using System.Windows.Forms;
 
 namespace indeed.com.parser
@@ -16,6 +8,15 @@ namespace indeed.com.parser
         public MainForm()
         {
             InitializeComponent();
+        }
+
+        public void d()
+        {
+            ParserRequest request = new ParserRequestBuilder()
+                .FindJob("jdjdj")
+                .InCity("city")
+                .WithSalary(1)
+                .Build();
         }
     }
 }
