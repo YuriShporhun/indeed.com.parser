@@ -2,7 +2,7 @@
 
 namespace indeed.com.presenters
 {
-    class TaskPanelPresenter: IRefreshable
+    public class TaskPanelPresenter: IRefreshable
     {
         private ITaskPanelView view;
         private TaskModel model;

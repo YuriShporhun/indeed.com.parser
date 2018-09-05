@@ -31,7 +31,7 @@ namespace indeed.com.parser
         private void InitializeComponent()
         {
             this.mainSplitContainer = new System.Windows.Forms.SplitContainer();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.tasksLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -54,7 +54,7 @@ namespace indeed.com.parser
             // 
             // mainSplitContainer.Panel1
             // 
-            this.mainSplitContainer.Panel1.Controls.Add(this.flowLayoutPanel1);
+            this.mainSplitContainer.Panel1.Controls.Add(this.tasksLayoutPanel);
             // 
             // mainSplitContainer.Panel2
             // 
@@ -63,14 +63,14 @@ namespace indeed.com.parser
             this.mainSplitContainer.SplitterDistance = 325;
             this.mainSplitContainer.TabIndex = 0;
             // 
-            // flowLayoutPanel1
+            // tasksLayoutPanel
             // 
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(325, 426);
-            this.flowLayoutPanel1.TabIndex = 0;
+            this.tasksLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tasksLayoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.tasksLayoutPanel.Location = new System.Drawing.Point(0, 0);
+            this.tasksLayoutPanel.Name = "tasksLayoutPanel";
+            this.tasksLayoutPanel.Size = new System.Drawing.Size(325, 426);
+            this.tasksLayoutPanel.TabIndex = 0;
             // 
             // tabControl1
             // 
@@ -98,7 +98,7 @@ namespace indeed.com.parser
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(639, 424);
+            this.tabPage2.Size = new System.Drawing.Size(639, 400);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -126,6 +126,7 @@ namespace indeed.com.parser
             this.createToolStripMenuItem.Name = "createToolStripMenuItem";
             this.createToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.createToolStripMenuItem.Text = "Create";
+            this.createToolStripMenuItem.Click += new System.EventHandler(this.createToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -151,7 +152,7 @@ namespace indeed.com.parser
         #endregion
 
         private System.Windows.Forms.SplitContainer mainSplitContainer;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel tasksLayoutPanel;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;

@@ -41,16 +41,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="models\NewTaskDescription.cs" />
+    <Compile Include="models\TaskModel.cs" />
+    <Compile Include="presenters\CreateTaskPresenter.cs" />
     <Compile Include="IRefreshable.cs" />
-    <Compile Include="ITaskPanel.View.cs" />
+    <Compile Include="views\ICreateTaskView.cs" />
+    <Compile Include="views\ITaskPanel.View.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RefreshableAttribute.cs" />
-    <Compile Include="TaskPanel.Presenter.cs" />
+    <Compile Include="presenters\TaskPanel.Presenter.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\indeed.com.models\indeed.com.models.csproj">
-      <Project>{10BB8636-251D-46F5-AC35-3065D34A5054}</Project>
-      <Name>indeed.com.models</Name>
+    <ProjectReference Include="..\indeed.com.classes\indeed.com.classes.csproj">
+      <Project>{7db59a88-84a1-405f-b2d8-3c5f1d0edd27}</Project>
+      <Name>indeed.com.classes</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

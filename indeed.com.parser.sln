@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "indeed.com.presenters", "in
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "indeed.com.classes", "indeed.com.classes\indeed.com.classes.csproj", "{7DB59A88-84A1-405F-B2D8-3C5F1D0EDD27}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "indeed.com.models", "indeed.com.models\indeed.com.models.csproj", "{10BB8636-251D-46F5-AC35-3065D34A5054}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "indeed.com.tests", "indeed.com.tests\indeed.com.tests.csproj", "{5F3ADBF9-A03C-4975-AE66-19BC43967E88}"
 EndProject
 Global
@@ -31,10 +29,6 @@ Global
 		{7DB59A88-84A1-405F-B2D8-3C5F1D0EDD27}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7DB59A88-84A1-405F-B2D8-3C5F1D0EDD27}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7DB59A88-84A1-405F-B2D8-3C5F1D0EDD27}.Release|Any CPU.Build.0 = Release|Any CPU
-		{10BB8636-251D-46F5-AC35-3065D34A5054}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{10BB8636-251D-46F5-AC35-3065D34A5054}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{10BB8636-251D-46F5-AC35-3065D34A5054}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{10BB8636-251D-46F5-AC35-3065D34A5054}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5F3ADBF9-A03C-4975-AE66-19BC43967E88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5F3ADBF9-A03C-4975-AE66-19BC43967E88}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F3ADBF9-A03C-4975-AE66-19BC43967E88}.Release|Any CPU.ActiveCfg = Release|Any CPU
