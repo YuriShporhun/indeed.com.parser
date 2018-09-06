@@ -18,24 +18,22 @@ namespace indeed.com.parser
             InitializeComponent();
         }
 
+        public string SetTaskName { set => taskNametextBox.Text = value; }
+        public string SetTaskDescription { set => taskDescriptionTextBox.Text = value; }
+
         public event EventHandler<EventArgs> Run;
         public event EventHandler<EventArgs> Pause;
         public event EventHandler<EventArgs> Cancel;
         public event EventHandler<EventArgs> Result;
 
-        public void SetTaskDescription(string description)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void SetTaskName(string name)
-        {
-            throw new NotImplementedException();
-        }
-
         public void UpdateProgress(int progress)
         {
             throw new NotImplementedException();
+        }
+
+        private void TaskPanel_Load(object sender, EventArgs e)
+        {
+       
         }
     }
 }

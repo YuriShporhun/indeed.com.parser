@@ -2,24 +2,21 @@
 
 namespace indeed.com.presenters
 {
-    public class TaskPanelPresenter: IRefreshable
+    public class TaskPanelPresenter
     {
         private ITaskPanelView view;
-        private TaskModel model;
+        private TaskModel model = new TaskModel();
 
-        public TaskPanelPresenter(ITaskPanelView view)
+        public TaskPanelPresenter(ITaskPanelView view, string name, string description)
         {
             this.view = view;
-            model = new TaskModel();
-        }
-
-        public void Refresh()
-        {
-            throw new System.NotImplementedException();
+            model.Name = name;
+            model.Description = description;
+            view.SetTaskName = name;
+            view.SetTaskDescription = description;
         }
 
         public void RunTask() => model.Run();
-
         public void CancellTask() => model.Cancell();
     }
 }

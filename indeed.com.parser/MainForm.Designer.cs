@@ -32,7 +32,7 @@ namespace indeed.com.parser
         {
             this.mainSplitContainer = new System.Windows.Forms.SplitContainer();
             this.tasksLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.logTabs = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -42,7 +42,7 @@ namespace indeed.com.parser
             this.mainSplitContainer.Panel1.SuspendLayout();
             this.mainSplitContainer.Panel2.SuspendLayout();
             this.mainSplitContainer.SuspendLayout();
-            this.tabControl1.SuspendLayout();
+            this.logTabs.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,7 +58,7 @@ namespace indeed.com.parser
             // 
             // mainSplitContainer.Panel2
             // 
-            this.mainSplitContainer.Panel2.Controls.Add(this.tabControl1);
+            this.mainSplitContainer.Panel2.Controls.Add(this.logTabs);
             this.mainSplitContainer.Size = new System.Drawing.Size(976, 426);
             this.mainSplitContainer.SplitterDistance = 325;
             this.mainSplitContainer.TabIndex = 0;
@@ -72,16 +72,16 @@ namespace indeed.com.parser
             this.tasksLayoutPanel.Size = new System.Drawing.Size(325, 426);
             this.tasksLayoutPanel.TabIndex = 0;
             // 
-            // tabControl1
+            // logTabs
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(647, 426);
-            this.tabControl1.TabIndex = 0;
+            this.logTabs.Controls.Add(this.tabPage1);
+            this.logTabs.Controls.Add(this.tabPage2);
+            this.logTabs.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.logTabs.Location = new System.Drawing.Point(0, 0);
+            this.logTabs.Name = "logTabs";
+            this.logTabs.SelectedIndex = 0;
+            this.logTabs.Size = new System.Drawing.Size(647, 426);
+            this.logTabs.TabIndex = 0;
             // 
             // tabPage1
             // 
@@ -141,7 +141,7 @@ namespace indeed.com.parser
             this.mainSplitContainer.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.mainSplitContainer)).EndInit();
             this.mainSplitContainer.ResumeLayout(false);
-            this.tabControl1.ResumeLayout(false);
+            this.logTabs.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -153,7 +153,7 @@ namespace indeed.com.parser
 
         private System.Windows.Forms.SplitContainer mainSplitContainer;
         private System.Windows.Forms.FlowLayoutPanel tasksLayoutPanel;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl logTabs;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.MenuStrip menuStrip1;

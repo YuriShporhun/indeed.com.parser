@@ -4,8 +4,9 @@ namespace indeed.com.presenters
 {
     public interface ITaskPanelView
     {
-        void SetTaskName(string name);
-        void SetTaskDescription(string description);
+        string SetTaskName { set; }
+        string SetTaskDescription { set; }
+
         void UpdateProgress(int progress);
         event EventHandler<EventArgs> Run;
         event EventHandler<EventArgs> Pause;

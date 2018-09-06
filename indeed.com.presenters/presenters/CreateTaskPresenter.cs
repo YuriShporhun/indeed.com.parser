@@ -21,6 +21,7 @@ namespace indeed.com.presenters
             model.Description = view.TaskDescription;
         }
 
-        public NewTaskDescription GetCreatedTask => model;
+        public string Name => model.Name;
+        public string Description => model.Description;
     }
 }

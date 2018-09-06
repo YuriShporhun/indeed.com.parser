@@ -44,7 +44,6 @@
     <Compile Include="models\NewTaskDescription.cs" />
     <Compile Include="models\TaskModel.cs" />
     <Compile Include="presenters\CreateTaskPresenter.cs" />
-    <Compile Include="IRefreshable.cs" />
     <Compile Include="views\ICreateTaskView.cs" />
     <Compile Include="views\ITaskPanel.View.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
