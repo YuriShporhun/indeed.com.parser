@@ -38,7 +38,17 @@ namespace indeed.com.models
                 State = TaskState.Cancelled;
                 return true;
             }
-            return false; ;
+            return false;
+        }
+
+        public bool Pause()
+        {
+            if(State == TaskState.Runned)
+            {
+                State = TaskState.Paused;
+                return true;
+            }
+            return false;
         }
     }
 }

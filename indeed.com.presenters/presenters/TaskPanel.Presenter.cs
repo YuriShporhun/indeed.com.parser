@@ -18,5 +18,6 @@ namespace indeed.com.presenters
 
         public void RunTask() => model.Run();
         public void CancellTask() => model.Cancell();
+        public void Pause() => model.Pause();
     }
 }
