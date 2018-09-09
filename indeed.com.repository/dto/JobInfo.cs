@@ -11,11 +11,12 @@ namespace indeed.com.models
     /// </summary>
     public class JobInfo
     {
-        public string CompanyName { get; }
-        public string Description { get; }
-        public string Title { get; }
-        public string City { get; }
-        public string PostingTime { get; }
-        public int? ApproxSalary { get; }
+        public int Id { get; set; }
+        public string CompanyName { get; set; }
+        public string Description { get; set; }
+        public string Title { get; set; }
+        public string City { get; set; }
+        public string PostingTime { get; set; }
+        public int? ApproxSalary { get; set; }
     }
 }
