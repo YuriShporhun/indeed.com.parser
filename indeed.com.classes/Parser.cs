@@ -10,7 +10,7 @@ namespace indeed.com.models
         public async Task<IEnumerable<JobInfo>> Parse(ParserRequest parserRequest)
         {
             HttpClient httpClient = new HttpClient();
-            string htmlString = await httpClient.GetStringAsync("http://www.ideed.com/" + parserRequest.ToString());
+            string htmlString = await httpClient.GetStringAsync("https://www.indeed.com/" + parserRequest.ToString());
 
             var parser = new HtmlParser();
             var doc = parser.Parse(htmlString);
