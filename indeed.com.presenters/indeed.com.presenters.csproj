@@ -55,6 +55,10 @@
       <Project>{7db59a88-84a1-405f-b2d8-3c5f1d0edd27}</Project>
       <Name>indeed.com.classes</Name>
     </ProjectReference>
+    <ProjectReference Include="..\indeed.com.repository\indeed.com.repository.csproj">
+      <Project>{4667ec0e-1a15-4dc7-b432-599dc12cda6f}</Project>
+      <Name>indeed.com.repository</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

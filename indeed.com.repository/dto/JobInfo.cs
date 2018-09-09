@@ -17,6 +17,5 @@ namespace indeed.com.models
         public string City { get; }
         public string PostingTime { get; }
         public int? ApproxSalary { get; }
-        public IEnumerable<JobProperty> Properties;
     }
 }

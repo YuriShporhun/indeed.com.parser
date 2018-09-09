@@ -42,11 +42,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CancellableTask.cs" />
-    <Compile Include="JobInfo.cs" />
-    <Compile Include="JobProperty.cs" />
     <Compile Include="ParserRequest.cs" />
     <Compile Include="ParserRequestBuilder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\indeed.com.repository\indeed.com.repository.csproj">
+      <Project>{4667ec0e-1a15-4dc7-b432-599dc12cda6f}</Project>
+      <Name>indeed.com.repository</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
