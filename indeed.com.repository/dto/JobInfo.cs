@@ -17,6 +17,6 @@ namespace indeed.com.models
         public string Title { get; set; }
         public string City { get; set; }
         public string PostingTime { get; set; }
-        public int? ApproxSalary { get; set; }
+        public int ApproxSalary { get; set; }
     }
 }

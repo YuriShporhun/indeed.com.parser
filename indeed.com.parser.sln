@@ -11,7 +11,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "indeed.com.classes", "indee
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "indeed.com.tests", "indeed.com.tests\indeed.com.tests.csproj", "{5F3ADBF9-A03C-4975-AE66-19BC43967E88}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "indeed.com.repository", "indeed.com.repository\indeed.com.repository.csproj", "{4667EC0E-1A15-4DC7-B432-599DC12CDA6F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "indeed.com.repository", "indeed.com.repository\indeed.com.repository.csproj", "{4667EC0E-1A15-4DC7-B432-599DC12CDA6F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1EB7CEE4-CF11-41BB-BC97-F0E26EC92F8D}"
+	ProjectSection(SolutionItems) = preProject
+		Readme.md = Readme.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
