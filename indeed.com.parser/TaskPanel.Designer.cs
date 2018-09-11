@@ -30,15 +30,15 @@
         {
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.headerLabel = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.taskNametextBox = new System.Windows.Forms.TextBox();
             this.taskDescriptionTextBox = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.runTaskButton = new System.Windows.Forms.Button();
+            this.pauseTaskButton = new System.Windows.Forms.Button();
+            this.cancelTaskButton = new System.Windows.Forms.Button();
+            this.taskResultButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // progressBar1
@@ -57,14 +57,14 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Progress";
             // 
-            // label2
+            // headerLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "<Task>";
+            this.headerLabel.AutoSize = true;
+            this.headerLabel.Location = new System.Drawing.Point(3, 0);
+            this.headerLabel.Name = "headerLabel";
+            this.headerLabel.Size = new System.Drawing.Size(79, 13);
+            this.headerLabel.TabIndex = 2;
+            this.headerLabel.Text = "<Task header>";
             // 
             // label3
             // 
@@ -99,60 +99,63 @@
             this.taskDescriptionTextBox.Size = new System.Drawing.Size(211, 51);
             this.taskDescriptionTextBox.TabIndex = 6;
             // 
-            // button1
+            // runTaskButton
             // 
-            this.button1.Location = new System.Drawing.Point(17, 147);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(72, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Run";
-            this.button1.UseVisualStyleBackColor = true;
+            this.runTaskButton.Location = new System.Drawing.Point(17, 147);
+            this.runTaskButton.Name = "runTaskButton";
+            this.runTaskButton.Size = new System.Drawing.Size(72, 23);
+            this.runTaskButton.TabIndex = 7;
+            this.runTaskButton.Text = "Run";
+            this.runTaskButton.UseVisualStyleBackColor = true;
+            this.runTaskButton.Click += new System.EventHandler(this.runTaskButton_Click);
             // 
-            // button2
+            // pauseTaskButton
             // 
-            this.button2.Location = new System.Drawing.Point(95, 147);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(64, 23);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Pause";
-            this.button2.UseVisualStyleBackColor = true;
+            this.pauseTaskButton.Location = new System.Drawing.Point(95, 147);
+            this.pauseTaskButton.Name = "pauseTaskButton";
+            this.pauseTaskButton.Size = new System.Drawing.Size(64, 23);
+            this.pauseTaskButton.TabIndex = 8;
+            this.pauseTaskButton.Text = "Pause";
+            this.pauseTaskButton.UseVisualStyleBackColor = true;
+            this.pauseTaskButton.Click += new System.EventHandler(this.pauseTaskButton_Click);
             // 
-            // button3
+            // cancelTaskButton
             // 
-            this.button3.Location = new System.Drawing.Point(165, 147);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(63, 23);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Cancel";
-            this.button3.UseVisualStyleBackColor = true;
+            this.cancelTaskButton.Location = new System.Drawing.Point(165, 147);
+            this.cancelTaskButton.Name = "cancelTaskButton";
+            this.cancelTaskButton.Size = new System.Drawing.Size(63, 23);
+            this.cancelTaskButton.TabIndex = 9;
+            this.cancelTaskButton.Text = "Cancel";
+            this.cancelTaskButton.UseVisualStyleBackColor = true;
+            this.cancelTaskButton.Click += new System.EventHandler(this.cancelTaskButton_Click);
             // 
-            // button4
+            // taskResultButton
             // 
-            this.button4.Location = new System.Drawing.Point(234, 147);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(61, 23);
-            this.button4.TabIndex = 10;
-            this.button4.Text = "Result";
-            this.button4.UseVisualStyleBackColor = true;
+            this.taskResultButton.Location = new System.Drawing.Point(234, 147);
+            this.taskResultButton.Name = "taskResultButton";
+            this.taskResultButton.Size = new System.Drawing.Size(61, 23);
+            this.taskResultButton.TabIndex = 10;
+            this.taskResultButton.Text = "Result";
+            this.taskResultButton.UseVisualStyleBackColor = true;
+            this.taskResultButton.Click += new System.EventHandler(this.taskResultButton_Click);
             // 
             // TaskPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.taskResultButton);
+            this.Controls.Add(this.cancelTaskButton);
+            this.Controls.Add(this.pauseTaskButton);
+            this.Controls.Add(this.runTaskButton);
             this.Controls.Add(this.taskDescriptionTextBox);
             this.Controls.Add(this.taskNametextBox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.headerLabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.progressBar1);
             this.Name = "TaskPanel";
             this.Size = new System.Drawing.Size(317, 195);
-            this.Load += new System.EventHandler(this.TaskPanel_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -162,14 +165,14 @@
 
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label headerLabel;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox taskNametextBox;
         private System.Windows.Forms.TextBox taskDescriptionTextBox;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button runTaskButton;
+        private System.Windows.Forms.Button pauseTaskButton;
+        private System.Windows.Forms.Button cancelTaskButton;
+        private System.Windows.Forms.Button taskResultButton;
     }
 }

@@ -6,6 +6,7 @@ namespace indeed.com.presenters
     {
         string SetTaskName { set; }
         string SetTaskDescription { set; }
+        string SetTaskHeader { set; }
 
         void UpdateProgress(int progress);
         event EventHandler<EventArgs> Run;

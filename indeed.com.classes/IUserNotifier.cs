@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace indeed.com.presenters
+namespace indeed.com.models
 {
-    [AttributeUsage(System.AttributeTargets.Class)]
-    class Refreshable: Attribute
+    public interface IUserNotifier
     {
+        void NotifyUser(string message, string caption);
     }
 }

@@ -1,8 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace indeed.com.models
 {
-    public class TaskModel
+    public class TaskPanelModel
     {
         public enum TaskState
         {
@@ -14,24 +16,29 @@ namespace indeed.com.models
 
         private CancellableTask<ICollection<JobInfo>, JobInfo> jobTasks;
 
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public TaskState State { get; private set; }
+        public string Name { get; internal set; }
+        public ParserRequest Request { get; internal set; }
+        public string Description { get; internal set; }
+        public TaskState State { get; internal set; }
+
+        public event Action<string> OnComplete;
+        public event Action<string> OnError;
 
         public bool IsReady() => State == TaskState.Ready ? true : false;
 
-        public bool Run()
+        public async Task Run()
         {
             if(State == TaskState.Ready || State == TaskState.Paused)
             {
-
                 State = TaskState.Runned;
-                return true;
+                Parser parser = new Parser();
+                IEnumerable<JobInfo> parsedData = await parser.Parse(Request);
+                OnComplete?.Invoke($"The parser finished the {Name} task successfully");
             }
-            return false;
+            OnError?.Invoke($"The parser failed the {Name} task");
         }
 
-        public bool Cancell()
+        public bool Cancel()
         {
             if (State != TaskState.Cancelled)
             {

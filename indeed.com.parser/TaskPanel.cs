@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using indeed.com.presenters;
 
@@ -20,6 +13,7 @@ namespace indeed.com.parser
 
         public string SetTaskName { set => taskNametextBox.Text = value; }
         public string SetTaskDescription { set => taskDescriptionTextBox.Text = value; }
+        public string SetTaskHeader { set => this.headerLabel.Text = value; }
 
         public event EventHandler<EventArgs> Run;
         public event EventHandler<EventArgs> Pause;
@@ -31,9 +25,16 @@ namespace indeed.com.parser
             throw new NotImplementedException();
         }
 
-        private void TaskPanel_Load(object sender, EventArgs e)
-        {
-       
-        }
+        private void runTaskButton_Click(object sender, EventArgs e) =>
+            Run?.Invoke(sender, EventArgs.Empty);
+
+        private void pauseTaskButton_Click(object sender, EventArgs e) =>
+            Pause?.Invoke(sender, EventArgs.Empty);
+
+        private void cancelTaskButton_Click(object sender, EventArgs e) =>
+            Cancel?.Invoke(sender, EventArgs.Empty);
+
+        private void taskResultButton_Click(object sender, EventArgs e) =>
+            Result?.Invoke(sender, EventArgs.Empty);
     }
 }

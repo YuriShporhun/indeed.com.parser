@@ -19,9 +19,11 @@ namespace indeed.com.presenters
         {
             model.Name = view.TaskName;
             model.Description = view.TaskDescription;
+            model.Request = view.Request;
         }
 
         public string Name => model.Name;
         public string Description => model.Description;
+        public ParserRequest Request => model.Request;
     }
 }

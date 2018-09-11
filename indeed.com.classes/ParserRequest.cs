@@ -91,11 +91,8 @@ namespace indeed.com.models
             }
         }
 
-        public override string ToString()
-        {
-            return $"q-{JobPosition}-${ExpectedSalary}-l-{City}-jobs.html";
-        }
-
+        public override string ToString() => $"q-{JobPosition}-${ExpectedSalary}-l-{City}-jobs.html";
+        public string Description => $"Finds {jobPosition} with {ExpectedSalary} in {city}";
         internal ParserRequest() { }
     }
 }

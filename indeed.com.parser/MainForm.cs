@@ -1,4 +1,5 @@
-﻿using indeed.com.presenters;
+﻿using indeed.com.models;
+using indeed.com.presenters;
 using indeed.com.presenters.views;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -23,9 +24,13 @@ namespace indeed.com.parser
 
             UserControl taskPanel = new TaskPanel();
 
-            presenters.Add(new TaskPanelPresenter(taskPanel as ITaskPanelView, 
+            //TODO add NewTaskParameters bulder or whatever
+            /*presenters.Add(new TaskPanelPresenter(taskPanel as ITaskPanelView, new NewTaskParameters
                 createTaskPresenter.Name, 
-                createTaskPresenter.Description));
+                createTaskPresenter.Description,
+                createTaskPresenter.Request,
+                (m) => MessageBox.Show(m),
+                (m) => MessageBox.Show(m)));*/
 
             tasksLayoutPanel.Controls.Add(taskPanel);
 

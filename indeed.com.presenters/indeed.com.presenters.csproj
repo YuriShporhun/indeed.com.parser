@@ -42,12 +42,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="models\NewTaskDescription.cs" />
-    <Compile Include="models\TaskModel.cs" />
+    <Compile Include="models\TaskPanelModel.cs" />
     <Compile Include="presenters\CreateTaskPresenter.cs" />
     <Compile Include="views\ICreateTaskView.cs" />
     <Compile Include="views\ITaskPanelView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RefreshableAttribute.cs" />
     <Compile Include="presenters\TaskPanelPresenter.cs" />
   </ItemGroup>
   <ItemGroup>

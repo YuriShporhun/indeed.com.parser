@@ -1,23 +1,31 @@
 ﻿using indeed.com.models;
+using System;
 
 namespace indeed.com.presenters
 {
     public class TaskPanelPresenter
     {
         private ITaskPanelView view;
-        private TaskModel model = new TaskModel();
+        private TaskPanelModel model = new TaskPanelModel();
 
-        public TaskPanelPresenter(ITaskPanelView view, string name, string description)
+        public TaskPanelPresenter(ITaskPanelView view, NewTaskParameters parameters)
         {
             this.view = view;
-            model.Name = name;
-            model.Description = description;
-            view.SetTaskName = name;
-            view.SetTaskDescription = description;
+            model.Name = parameters.Name;
+            model.Description = parameters.Description;
+            model.Request = parameters.request;
+            model.OnError += parameters.OnError;
+            model.OnComplete += parameters.OnComplete;
+            view.SetTaskHeader = parameters.request.Description;
+            view.SetTaskName = parameters.Name;
+            view.SetTaskDescription = parameters.Description;
+            view.Run += RunTask;
+            view.Pause += PauseTask;
+            view.Cancel += CancelTask;
         }
 
-        public void RunTask() => model.Run();
-        public void CancellTask() => model.Cancell();
-        public void Pause() => model.Pause();
+        public async void RunTask(object sender, EventArgs e) => await model.Run();
+        public void CancelTask(object sender, EventArgs e) => model.Cancel();
+        public void PauseTask(object sender, EventArgs e) => model.Pause();
     }
 }
