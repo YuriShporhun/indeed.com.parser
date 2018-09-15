@@ -24,13 +24,12 @@ namespace indeed.com.parser
 
             UserControl taskPanel = new TaskPanel();
 
-            //TODO add NewTaskParameters bulder or whatever
-            /*presenters.Add(new TaskPanelPresenter(taskPanel as ITaskPanelView, new NewTaskParameters
-                createTaskPresenter.Name, 
+            presenters.Add(new TaskPanelPresenter(taskPanel as ITaskPanelView, new NewTaskParameters
+                Name = createTaskPresenter.Name, 
                 createTaskPresenter.Description,
                 createTaskPresenter.Request,
                 (m) => MessageBox.Show(m),
-                (m) => MessageBox.Show(m)));*/
+                (m) => MessageBox.Show(m)));
 
             tasksLayoutPanel.Controls.Add(taskPanel);
 
