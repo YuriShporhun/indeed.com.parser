@@ -11,5 +11,11 @@ namespace indeed.com.models.NewTaskParameters
             parameters.OnComplete = action;
             return this;
         }
+
+        public EventBuilder Error(Action<string> action)
+        {
+            parameters.OnError = action;
+            return this;
+        }
     }
 }
