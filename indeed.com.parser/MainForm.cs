@@ -1,4 +1,5 @@
 ﻿using indeed.com.models;
+using indeed.com.models.NewTaskParameters;
 using indeed.com.presenters;
 using indeed.com.presenters.views;
 using System.Collections.Generic;
@@ -23,14 +24,19 @@ namespace indeed.com.parser
             form.ShowDialog();
 
             UserControl taskPanel = new TaskPanel();
+            TaskParameters taskParameters = TaskParameters.Create
+                .Events
+                    .Error((m) => MessageBox.Show(m))
+                    .Complete((m) => MessageBox.Show(m))
+                .Fields
+                    .Name(createTaskPresenter.Name)
+                    .Description(createTaskPresenter.Description)
+                    .Request(createTaskPresenter.Request)
+                .Get;
 
-            presenters.Add(new TaskPanelPresenter(taskPanel as ITaskPanelView, new NewTaskParameters
-                Name = createTaskPresenter.Name, 
-                createTaskPresenter.Description,
-                createTaskPresenter.Request,
-                (m) => MessageBox.Show(m),
-                (m) => MessageBox.Show(m)));
 
+
+            presenters.Add(new TaskPanelPresenter(taskPanel as ITaskPanelView, taskParameters));
             tasksLayoutPanel.Controls.Add(taskPanel);
 
             logTabs.TabPages.Add(new TabPage("Task"));

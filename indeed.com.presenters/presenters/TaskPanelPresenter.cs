@@ -1,4 +1,5 @@
 ﻿using indeed.com.models;
+using indeed.com.models.NewTaskParameters;
 using System;
 
 namespace indeed.com.presenters
@@ -8,7 +9,7 @@ namespace indeed.com.presenters
         private ITaskPanelView view;
         private TaskPanelModel model = new TaskPanelModel();
 
-        public TaskPanelPresenter(ITaskPanelView view, NewTaskParameters parameters)
+        public TaskPanelPresenter(ITaskPanelView view, TaskParameters parameters)
         {
             this.view = view;
             model.Name = parameters.Name;

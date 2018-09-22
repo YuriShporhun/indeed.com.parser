@@ -2,14 +2,14 @@
 
 namespace indeed.com.models.NewTaskParameters
 {
-    public class Parameters
+    public class TaskParameters
     {
         public string Name { get; set; } = "Unknown";
         public string Description { get; set; } = string.Empty;
         public ParserRequest request { get; set; }
         public Action<string> OnComplete { get; set; } = null;
         public Action<string> OnError { get; set; } = null;
-        private Parameters() { }
-        public Builder Create => new Builder();
+        private TaskParameters() { }
+        public static TaskParametersBuilder Create => new TaskParametersBuilder();
     }
 }

@@ -1,11 +1,12 @@
 ﻿namespace indeed.com.models.NewTaskParameters
 {
-    public class Builder
+    public class TaskParametersBuilder
     {
-        private Parameters parameters;
-        internal Builder() { }
+        protected TaskParameters parameters;
+        internal TaskParametersBuilder() { }
 
         public FieldBuilder Fields => new FieldBuilder(parameters);
         public EventBuilder Events => new EventBuilder(parameters);
+        public TaskParameters Get => parameters;
     }
 }

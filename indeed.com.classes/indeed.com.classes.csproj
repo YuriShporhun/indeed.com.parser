@@ -48,10 +48,10 @@
   <ItemGroup>
     <Compile Include="CancellableTask.cs" />
     <Compile Include="IUserNotifier.cs" />
-    <Compile Include="NewTaskParameters\Parameters.cs" />
-    <Compile Include="NewTaskParameters\Builder.cs" />
-    <Compile Include="NewTaskParameters\EventBuilder.cs" />
-    <Compile Include="NewTaskParameters\FieldBuilder.cs" />
+    <Compile Include="TaskParameters\TaskParameters.cs" />
+    <Compile Include="TaskParameters\TaskParametersBuilder.cs" />
+    <Compile Include="TaskParameters\EventBuilder.cs" />
+    <Compile Include="TaskParameters\FieldBuilder.cs" />
     <Compile Include="ParserRequest.cs" />
     <Compile Include="ParserRequestBuilder.cs" />
     <Compile Include="Parser.cs" />
