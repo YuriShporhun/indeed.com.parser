@@ -2,7 +2,7 @@
 
 namespace indeed.com.models.NewTaskParameters
 {
-    public class EventBuilder: TaskParametersBuilder
+    public class EventBuilder: TaskParameters.Builder
     {
         public EventBuilder(TaskParameters parameters) => this.parameters = parameters;
         public EventBuilder Complete(Action<string> action)

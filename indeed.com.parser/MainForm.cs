@@ -24,6 +24,7 @@ namespace indeed.com.parser
             form.ShowDialog();
 
             UserControl taskPanel = new TaskPanel();
+
             TaskParameters taskParameters = TaskParameters.Create
                 .Events
                     .Error((m) => MessageBox.Show(m))

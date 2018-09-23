@@ -49,7 +49,6 @@
     <Compile Include="CancellableTask.cs" />
     <Compile Include="IUserNotifier.cs" />
     <Compile Include="TaskParameters\TaskParameters.cs" />
-    <Compile Include="TaskParameters\TaskParametersBuilder.cs" />
     <Compile Include="TaskParameters\EventBuilder.cs" />
     <Compile Include="TaskParameters\FieldBuilder.cs" />
     <Compile Include="ParserRequest.cs" />

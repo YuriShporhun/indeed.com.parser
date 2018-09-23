@@ -14,6 +14,7 @@ namespace indeed.com.models
 
             var parser = new HtmlParser();
             var doc = parser.Parse(htmlString);
+            var jobCards = doc.QuerySelectorAll("div.row.result.clickcard");
 
             return null; //TODO  удалить
         }

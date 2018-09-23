@@ -1,6 +1,6 @@
 ﻿namespace indeed.com.models.NewTaskParameters
 {
-    public class FieldBuilder: TaskParametersBuilder
+    public class FieldBuilder: TaskParameters.Builder
     {
         public FieldBuilder(TaskParameters parameters) => this.parameters = parameters;
         public FieldBuilder Name(string name)
