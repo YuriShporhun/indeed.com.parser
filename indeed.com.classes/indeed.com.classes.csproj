@@ -47,7 +47,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CancellableTask.cs" />
-    <Compile Include="IUserNotifier.cs" />
     <Compile Include="TaskParameters\TaskParameters.cs" />
     <Compile Include="TaskParameters\EventBuilder.cs" />
     <Compile Include="TaskParameters\FieldBuilder.cs" />
@@ -55,7 +54,6 @@
     <Compile Include="ParserRequestBuilder.cs" />
     <Compile Include="Parser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WinFormsNotifier.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\indeed.com.repository\indeed.com.repository.csproj">
