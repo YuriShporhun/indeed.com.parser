@@ -65,8 +65,10 @@ namespace indeed.com.models
                     OnError?.Invoke($"The parser is already processing the {Name} task");
                     break;
                 case TaskState.Cancelled:
+                    OnError?.Invoke($"The task {Name} has been canceled");
                     break;
                 case TaskState.Completed:
+                    OnError?.Invoke($"The task {Name} is already completed");
                     break;
                 default:
                     throw new NotImplementedException();
